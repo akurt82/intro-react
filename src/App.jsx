@@ -15,6 +15,7 @@ class App extends React.Component {
 
     this.handleButtonClicked = this.handleButtonClicked.bind(this);
     this.addAssignment = this.addAssignment.bind(this);
+    this.addStudent = this.addStudent.bind(this);
     this.addGrade = this.addGrade.bind(this);
   }
 
@@ -59,6 +60,18 @@ class App extends React.Component {
           currList={this.state.assignments}
           addFunction={this.addAssignment}
           title="Assignments"
+        />
+      );
+    }
+
+    if ( this.state.buttonClicked === "students" )
+    {
+      tabChoice = (
+        <List 
+          placeholder="Add Student..." 
+          currList={this.state.students}
+          addFunction={this.addStudent}
+          title="Student Roster"
         />
       );
     }
