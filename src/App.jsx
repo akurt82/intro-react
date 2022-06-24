@@ -9,6 +9,7 @@ class App extends React.Component {
     this.state = {
       buttonClicked: "",
       assignments: [],
+      students: [],
       grades: {}
     };
 
@@ -26,6 +27,13 @@ class App extends React.Component {
   addAssignment(assignmentName) {
     this.setState({
       assignments: this.state.assignments.concat(assignmentName)
+    });
+  }
+
+  addStudent(studentName)
+  {
+    this.setState({
+      students : this.state.students.concat(studentName)
     });
   }
 
