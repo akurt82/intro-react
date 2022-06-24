@@ -79,7 +79,7 @@ class App extends React.Component {
     if ( this.state.buttonClicked === "grades" )
     {
       tabChoice = (
-        <List 
+        <Table 
           tableNames={this.state.assignments}
           rows={this.state.students}
           addFunction={this.addGrade}
